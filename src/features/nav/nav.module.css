@@ -1,0 +1,25 @@
+.addNote {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    height: fit-content;
+    margin-left: 0.5rem;
+
+    padding: 0.2rem;
+    text-decoration: none;
+}
+
+.nav {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    height: 100lvh;
+
+    padding: 0.5rem;
+    position: fixed;
+
+}
+
+

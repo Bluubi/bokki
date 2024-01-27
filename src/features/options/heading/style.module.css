@@ -1,0 +1,36 @@
+.options {
+    position: fixed;
+
+    background: white;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    min-width: 150px;
+
+    padding: 1rem;
+
+
+    z-index: 10;
+}
+
+.options > li {
+    padding: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.options > li:hover {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+
+.wrapper {
+
+    background-color: var(--secondary-color);
+    padding: 2rem;
+
+    cursor: pointer;
+
+}
