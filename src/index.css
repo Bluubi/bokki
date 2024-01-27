@@ -1,6 +1,7 @@
 :root {
   --primary-color: rgba(39, 43, 42, 0.5);
   --secondary-color: rgb(232, 232, 226);
+
 }
 
 body, html, ul, li, h1, h2, h3, h4, p {
@@ -9,8 +10,10 @@ body, html, ul, li, h1, h2, h3, h4, p {
 }
 
 * {
+  font-family: Montserrat, "Helvetica", sans-serif;
   box-sizing: border-box;
   position: relative;
+
 }
 
 

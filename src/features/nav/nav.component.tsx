@@ -7,7 +7,7 @@ export default function Nav(){
             <ul className={style.nav}>
                 <li> Mis notas </li>
             </ul>
-            <Link to={'/new/note'} className={style.addNote}>+</Link>
+            <Link to={'/note'} className={style.addNote}>+</Link>
         </nav>
     )
 }

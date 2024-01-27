@@ -1,9 +1,30 @@
-"use client";
+import {useEffect, useState} from "react";
+import {useLocation} from 'react-router';
+import styles from './styles.module.css'
+import {NavLink} from "react-router-dom";
 
-export default function Breadcrumb(){
-/*    const path = useRoutes()
+export default function Breadcrumb() {
 
-    const routes = path.split('/');
+    const [breadcrumbs, setBreadcrumbs] = useState<string[]>()
 
-    return routes.map((route, index) => <a href={`/${route}`} key={'link'+index}>  &gt;{route}</a>)*/
+    const location = useLocation();
+
+    useEffect(() => {
+        const routes = location.pathname.split('/');
+
+        function clean(){
+            return routes.filter((value, index) => routes.indexOf(value) === index);
+        }
+
+        setBreadcrumbs(clean());
+    }, [location])
+
+    return <nav className={styles.breadcrumbs}>{ breadcrumbs?.map( (breadcrumb, index) =>
+        <NavLink to={breadcrumb} key={`breadcrumb-${index}`} className={`${styles.breadcrumb}`} style={({ isActive }) => {
+            return {
+                fontWeight: isActive ? styles.active : "",
+            };
+        }}>
+        { breadcrumb === '' ? ' Home ' :  breadcrumb }</NavLink>) }
+    </nav>
 }

@@ -1,0 +1,25 @@
+.breadcrumbs {
+    padding: 0.5rem;
+    text-transform: capitalize;
+}
+
+
+.breadcrumb {
+    padding-left: 1%;
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+
+.breadcrumb::after {
+    position: absolute;
+    content: ' / ';
+}
+
+
