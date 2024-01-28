@@ -1,25 +1,28 @@
 .breadcrumbs {
     padding: 0.5rem;
-    text-transform: capitalize;
 }
 
 
-.breadcrumb {
+.breadcrumbs > a {
     padding-left: 1%;
+    text-transform: capitalize;
     text-decoration: none;
     color: black;
 }
 
-.active {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-
-
-.breadcrumb::after {
+.breadcrumbs > a::after {
     position: absolute;
     content: ' / ';
 }
+
+
+.active:is(.active) {
+    color: var(--primary-color);
+    font-weight: 400;
+    pointer-events: none;
+}
+
+
+
 
 

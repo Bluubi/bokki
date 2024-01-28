@@ -20,11 +20,7 @@ export default function Breadcrumb() {
     }, [location])
 
     return <nav className={styles.breadcrumbs}>{ breadcrumbs?.map( (breadcrumb, index) =>
-        <NavLink to={breadcrumb} key={`breadcrumb-${index}`} className={`${styles.breadcrumb}`} style={({ isActive }) => {
-            return {
-                fontWeight: isActive ? styles.active : "",
-            };
-        }}>
-        { breadcrumb === '' ? ' Home ' :  breadcrumb }</NavLink>) }
+        <NavLink to={breadcrumb} key={`breadcrumb-${index}`} className={ ({isActive}: {isActive: boolean}) => isActive ? styles.active : ""}  >
+        { breadcrumb === '' ? ' Home' :  breadcrumb }</NavLink>) }
     </nav>
 }
